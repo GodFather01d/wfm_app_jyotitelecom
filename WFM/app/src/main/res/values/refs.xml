@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="water_droplet_frame_1" />
+    <drawable name="water_droplet_frame_2" />
+    <drawable name="ic_baseline_person_24" />
+    <drawable name="ic_baseline_email_24" />
+    <drawable name="ic_notification" />
+    <drawable name="icon" />
+</resources>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewTankHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tank Height"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextTankHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTankHeight"
+        android:inputType="numberDecimal"
+        android:hint="Enter tank height in meters"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/textViewLowerLimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lower Limit"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@id/editTextTankHeight"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextLowerLimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewLowerLimit"
+        android:inputType="numberDecimal"
+        android:hint="Enter lower limit in meters"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/textViewUpperLimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upper Limit"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@id/editTextLowerLimit"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextUpperLimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewUpperLimit"
+        android:inputType="numberDecimal"
+        android:hint="Enter upper limit in meters"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/textViewWifiID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WiFi ID"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@id/editTextUpperLimit"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextWifiID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewWifiID"
+        android:inputType="text"
+        android:hint="Enter WiFi ID"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/textViewWifiPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WiFi Password"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@id/editTextWifiID"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextWifiPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewWifiPassword"
+        android:layout_marginTop="14dp"
+        android:hint="Enter WiFi password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/buttonSaveSettings"
+        android:layout_width="94dp"
+        android:layout_height="65dp"
+        android:layout_below="@id/editTextWifiPassword"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="158dp"
+        android:text="Save" />
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item
+            android:id="@+id/action_settings"
+            android:orderInCategory="100"
+            android:title="TANK_PARAMETER"
+            app:showAsAction="" />
+        <item
+            android:id="@+id/add_tank"
+            android:orderInCategory="100"
+            android:title="ADD_TANK"
+            app:showAsAction="" />
+        <item
+            android:id="@+id/delete_tank"
+            android:orderInCategory="100"
+            android:title="DELETE_TANK"
+            app:showAsAction="" />
+        <item
+            android:id="@+id/Log_out"
+            android:orderInCategory="100"
+            android:title="LOG_OUT"
+            app:showAsAction="" />
+    </menu>
+

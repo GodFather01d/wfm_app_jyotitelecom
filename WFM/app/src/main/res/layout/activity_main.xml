@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:wave="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/lavender"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    <com.john.waveview.WaveView
+        android:id="@+id/wave_view"
+        android:layout_width="213dp"
+        android:layout_height="243dp"
+        android:layout_marginTop="20dp"
+        android:background="#A9BBE7F4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distanceTextView"
+        wave:above_wave_color="#1173DD"
+        wave:blow_wave_color="#1169C8"
+        wave:color="#227DE1"
+        wave:progress="50"
+
+        wave:wave_height="middle"
+        wave:wave_hz="normal"
+        wave:wave_length="middle">
+
+    </com.john.waveview.WaveView>
+
+    <ToggleButton
+        android:id="@+id/switch2"
+        android:layout_width="74dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+
+        android:text="@string/motor"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintStart_toEndOf="@+id/M2"
+        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+
+    <ImageView
+        android:id="@+id/ledIndicator"
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="33dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/circular_background"
+        app:layout_constraintStart_toEndOf="@+id/switch1"
+        app:layout_constraintTop_toBottomOf="@+id/tankIdSpinner" />
+
+    <TextView
+        android:id="@+id/M1"
+        android:layout_width="49dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/m1"
+        android:textColor="@color/black"
+
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tankIdSpinner" />
+
+    <TextView
+        android:id="@+id/M2"
+        android:layout_width="49dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/m2"
+
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/M1" />
+
+    <TextView
+        android:id="@+id/add_tank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:text="ADD_TANK"
+        android:textColor="@color/lavender"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <ImageView
+        android:id="@+id/ledIndicator2"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/circular_background"
+        app:layout_constraintStart_toEndOf="@+id/switch2"
+        app:layout_constraintTop_toBottomOf="@+id/ledIndicator"
+        tools:ignore="MissingConstraints" />
+
+    <ToggleButton
+        android:id="@+id/switch1"
+        android:layout_width="74dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/M1"
+        app:layout_constraintTop_toBottomOf="@+id/tankIdSpinner"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/distanceTextView"
+        android:layout_width="246dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/distance"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch2" />
+
+
+    <TextView
+        android:id="@+id/voltage"
+        android:layout_width="219dp"
+        android:layout_height="37dp"
+
+        android:layout_marginTop="24dp"
+        android:text="@string/v"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <ImageView
+        android:id="@+id/STATE"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="18dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/circular_background"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="172dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="140dp"
+        android:contentDescription="@string/todo2"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_4" />
+
+    <Spinner
+        android:id="@+id/tankIdSpinner"
+        android:layout_width="219dp"
+        android:layout_height="40dp"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityspinner" />
+
+    <Spinner
+        android:id="@+id/cityspinner"
+        android:layout_width="219dp"
+        android:layout_height="40dp"
+
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/voltage" />
+
+    <TextView
+        android:id="@+id/percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/wave_view"
+        app:layout_constraintEnd_toEndOf="@+id/wave_view"
+        app:layout_constraintStart_toStartOf="@+id/wave_view"
+        app:layout_constraintTop_toTopOf="@+id/wave_view" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="28dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="72dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        wave:srcCompat="@drawable/drops" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

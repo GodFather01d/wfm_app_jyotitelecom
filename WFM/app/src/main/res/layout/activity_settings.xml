@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+
+    <Spinner
+        android:id="@+id/cityspinner"
+        android:layout_width="284dp"
+        android:layout_height="33dp"
+
+        android:layout_below="@+id/analogValueTextView"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/tankIdSpinner"
+        android:layout_width="284dp"
+        android:layout_height="33dp"
+
+        android:layout_below="@+id/cityspinner"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTankHeight"
+        android:layout_width="107dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tankIdSpinner"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="44dp"
+        android:text="Tank Height"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/analogValueTextView"
+        android:layout_width="246dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
+        android:text="Analog mV: "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTankHeight"
+        android:layout_width="114dp"
+        android:layout_height="43dp"
+        android:layout_below="@+id/tankIdSpinner"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="36dp"
+        android:layout_toEndOf="@+id/textViewTankHeight"
+        android:background="@drawable/custom_edittext_addtank"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="15dp"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textViewLowerLimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTankHeight"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="40dp"
+        android:text="Upper Limit"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editTextLowerLimit"
+        android:layout_width="114dp"
+        android:layout_height="43dp"
+        android:layout_below="@+id/editTextTankHeight"
+        android:layout_alignStart="@+id/editTextTankHeight"
+        android:layout_alignEnd="@+id/editTextTankHeight"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="-1dp"
+        android:background="@drawable/custom_edittext_addtank"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="15dp"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textViewUpperLimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextLowerLimit"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="40dp"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:text="Lower Limit"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editTextUpperLimit"
+        android:layout_width="114dp"
+        android:layout_height="43dp"
+        android:layout_below="@+id/editTextLowerLimit"
+        android:layout_alignStart="@+id/editTextLowerLimit"
+        android:layout_alignEnd="@+id/editTextLowerLimit"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="-1dp"
+        android:background="@drawable/custom_edittext_addtank"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="15dp"
+        android:inputType="numberDecimal" />
+
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextUpperLimit"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="40dp"
+        android:text="Motor start time"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="114dp"
+        android:layout_height="43dp"
+        android:layout_below="@+id/editTextUpperLimit"
+        android:layout_alignStart="@+id/editTextUpperLimit"
+        android:layout_alignEnd="@+id/editTextUpperLimit"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="-2dp"
+        android:background="@drawable/custom_edittext_addtank"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="8dp"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/buttonSaveSettings"
+        android:layout_width="171dp"
+        android:layout_height="62dp"
+        android:layout_below="@+id/editTextEmail"
+        android:layout_alignEnd="@+id/editTextEmail"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/lavender"
+        android:text="UPDATE"
+        android:textSize="18sp"
+        app:cornerRadius="20dp" />
+
+
+</RelativeLayout>
